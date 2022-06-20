@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import usersRepository from '../../../../database/users_helpers'
 import Users from '../../../../models/users'
 
-export default function handler(
+export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Users | Users[] | string>
 ) {
