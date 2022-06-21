@@ -1,0 +1,281 @@
+_type: export
+__export_format: 4
+__export_date: 2022-06-21T01:04:29.779Z
+__export_source: insomnia.desktop.app:v2022.4.1
+resources:
+  - _id: req_b6abae97b6ee4e79b135b7984876c9fe
+    parentId: fld_007cf8630e51459f95a6d1808312a640
+    modified: 1655678978618
+    created: 1655678962072
+    url: http://localhost:8000/api/v1/email/
+    name: Send an email for a user
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1655678962072
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_007cf8630e51459f95a6d1808312a640
+    parentId: fld_3efee2f5e0ff49a89c3caf53bf46034c
+    modified: 1655678540661
+    created: 1655678540661
+    name: email
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1655678540661
+    _type: request_group
+  - _id: fld_3efee2f5e0ff49a89c3caf53bf46034c
+    parentId: wrk_0381815c79f742ff9aae9e3c42a9932b
+    modified: 1655671638754
+    created: 1655671638754
+    name: v1
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1655671638754
+    _type: request_group
+  - _id: wrk_0381815c79f742ff9aae9e3c42a9932b
+    parentId: null
+    modified: 1655671607310
+    created: 1655671607310
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_b4d7162c3b1d4f49b0f93b646219fa44
+    parentId: fld_007cf8630e51459f95a6d1808312a640
+    modified: 1655773405454
+    created: 1655678546216
+    url: http://localhost:8000/api/v1/email
+    name: Send an email for all users
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": ["fabiano@papercut.com", "rocha@papercut.com"]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_092f8c6d82f445cba79d1af503e6b623
+    authentication: {}
+    metaSortKey: -1655678546216
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0cb12b3b91db4002bfc960bb884dd93e
+    parentId: fld_3efee2f5e0ff49a89c3caf53bf46034c
+    modified: 1655676662146
+    created: 1655671607344
+    url: http://localhost:8000/api
+    name: Hello
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1655671649368
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4c77f78ca6394ec5ae6a696de8565e86
+    parentId: fld_60a7719a4a1044d1a05d8fa4a1a774cd
+    modified: 1655675956373
+    created: 1655675603732
+    url: http://localhost:8000/api/v1/users/:id
+    name: Delete an user
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_1a0d4125cb0647bda6d547f605564e50
+        name: id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1655675603732
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_60a7719a4a1044d1a05d8fa4a1a774cd
+    parentId: fld_3efee2f5e0ff49a89c3caf53bf46034c
+    modified: 1655671649318
+    created: 1655671649318
+    name: users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1655671649318
+    _type: request_group
+  - _id: req_8caf1a38e4694878b2a6fc6ee1aa095d
+    parentId: fld_60a7719a4a1044d1a05d8fa4a1a774cd
+    modified: 1655675625828
+    created: 1655675189817
+    url: http://localhost:8000/api/v1/users/:id
+    name: Update an user
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Fabiano Rocha",
+        	"email": "fabianorocha@test.com",
+        	"active": false
+        }
+    parameters:
+      - id: pair_b7babff84579480cb77e0b05f425e8b4
+        name: id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_be114c8439b944659429b5cbcfa2c68f
+    authentication: {}
+    metaSortKey: -1655675189817
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5c3595fef74b43ad82b5562dfaebbf21
+    parentId: fld_60a7719a4a1044d1a05d8fa4a1a774cd
+    modified: 1655675640034
+    created: 1655673558006
+    url: http://localhost:8000/api/v1/users
+    name: Insert an user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Fabiano Rocha",
+        	"email": "fabianorocha@test.com"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_c1002eacee914357b855a09acd5b524e
+    authentication: {}
+    metaSortKey: -1655673558006
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_147f3c22ccd441bea9e7ada91d98a831
+    parentId: fld_60a7719a4a1044d1a05d8fa4a1a774cd
+    modified: 1655675647700
+    created: 1655672567495
+    url: http://localhost:8000/api/v1/users/:id
+    name: Read an user by id
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: id
+        value: "1"
+        id: pair_3b8404d3d02b4034a48355f5a3380b79
+    headers: []
+    authentication: {}
+    metaSortKey: -1655672567495
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e0d6f042aeb34adf9233394ade5fd403
+    parentId: fld_60a7719a4a1044d1a05d8fa4a1a774cd
+    modified: 1655672553650
+    created: 1655671654445
+    url: http://localhost:8000/api/v1/users
+    name: Read all users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1655671654445
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_f4c50bacd545604d6384b8e1f1bf55945d1b043f
+    parentId: wrk_0381815c79f742ff9aae9e3c42a9932b
+    modified: 1655671607333
+    created: 1655671607333
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1655671607333
+    _type: environment
+  - _id: jar_f4c50bacd545604d6384b8e1f1bf55945d1b043f
+    parentId: wrk_0381815c79f742ff9aae9e3c42a9932b
+    modified: 1655671607339
+    created: 1655671607339
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_2df85f0bfd4f4eb99f16ae508b71c39b
+    parentId: wrk_0381815c79f742ff9aae9e3c42a9932b
+    modified: 1655671626875
+    created: 1655671607326
+    fileName: Coffee-monitor
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_1604e8fb13c34c8da336ec285a743f45
+    parentId: wrk_0381815c79f742ff9aae9e3c42a9932b
+    modified: 1655671607347
+    created: 1655671607347
+    name: Example Test Suite
+    _type: unit_test_suite
